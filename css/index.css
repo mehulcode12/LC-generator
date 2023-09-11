@@ -1,0 +1,23 @@
+
+.navbar {
+  background-color: white;
+  color: black;
+}
+
+.navbar-toggler {
+  outline: 2px solid black;
+  background: black;
+
+}
+
+
+h4{
+  padding-left: 600px;
+  padding-bottom: 50px;
+}
+
+#heading2{
+  padding-left: 490px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
