@@ -1,3 +1,21 @@
+const userName = document.getElementById("name");
+const userMname = document.getElementById("Mname");
+const userreligion = document.getElementById("religion");
+const usernationality = document.getElementById("nationality");
+const userplaceOfBirth = document.getElementById("placeOfBirth");
+const userdobInFig = document.getElementById("dobInFig");
+const userdobInWords = document.getElementById("dobInWords");
+const userlCollege = document.getElementById("lCollege");
+const userdateOfAd = document.getElementById("dateOfAd");
+const userconduct = document.getElementById("conduct");
+const userdateOfLeav = document.getElementById("dateOfLeav");
+const useryearInStud = document.getElementById("yearInStud");
+const userreason = document.getElementById("reason");
+const userremarks = document.getElementById("remarks");
+
+const submitBtn = document.getElementById("submitBtn");
+
+const { PDFDocument, rgb, degrees } = PDFLib;
 
 
 const generatePDF = async (name, Mname, religion, 
@@ -99,13 +117,24 @@ const generatePDF = async (name, Mname, religion,
     });
 
     
+     // Serialize the PDFDocument to bytes (a Uint8Array)
+    const pdfBytes = await pdfDoc.save();
+    console.log("Done creating");
+    //const uri = await pdfDoc.saveAsBase64({dataUri: true});
 
-    const uri = await pdfDoc.saveAsBase64({dataUri: true});
+    var file = new File(
+        [pdfBytes],
+        "Padhega India Subscription Certificate.pdf",
+        {
+          type: "application/pdf;charset=utf-8",
+        }
+      );
+     saveAs(file);
+    };
+    // document.querySelector("#mypdf").src = uri;
 
-    document.querySelector("#mypdf").src = uri;
-};
 
-generatePDF("Pranav khandgale", "Deepali", "Hindu", "Indian",
- "Solapur", "12/01/2003", "fifteen January two thousand and three",
- "Fattechand", "12/12/2022", "Good", "1/07/2025", 
- "BE since 2024", "PassOut", "Good")
+// generatePDF("Khandu", "Bharat", "Hindu", "Indian",
+//  "Solapur", "30/02/2003", "fifteen January two thousand and three",
+//  "Fattechand", "12/12/2022", "Good", "1/07/2025", 
+//  "BE since 2024", "PassOut", "Good")

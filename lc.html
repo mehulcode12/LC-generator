@@ -3,14 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LC generator</title>
+    <link rel="stylesheet" href="/css/index.css">
+
+    <title>Get your LC</title>
 </head>
 <body>
     <header>
         Get your certificate
     </header>
-    <iframe src="" id="mypdf" height="700px" width="600px" frameborder="0"></iframe>
+    <main>
+
+        <label for="name">Type Your Name</label>
+        <input required type="text" name="name" autocomplete="name" id="name" minlength="3" maxlength="25">
+        
+        <label for="name">Type Your Mother Name</label>
+        <input required type="text" name="Mname" autocomplete="Mname" id="Mname" minlength="3" maxlength="25">
+        
+        <label for="name">Type Your Religion</label>
+        <input required type="text" name="religion" autocomplete="religion" id="religion" minlength="3" maxlength="25">
+        
+        <label for="name">Type Your Nationality</label>
+        <input required type="text" name="nationality" autocomplete="nationality" id="nationality" minlength="3" maxlength="25">
+        
+        <label for="name">Type Your Place of Birth</label>
+        <input required type="text" name="placeOfBirth" autocomplete="placeOfBirth" id="placeOfBirth" minlength="3" maxlength="25">
+        
+        <label for="name">Type Your Date of Birth</label>
+        <input required type="date" name="dobInFig" autocomplete="dobInFig" id="dobInFig" minlength="3" maxlength="25">
+        
+        <label for="name">Type Your DOB in words</label>
+        <input required type="text" name="dobInWords" autocomplete="dobInWords" id="dobInWords" minlength="3" maxlength="25">
+        
+        <label for="name">Type Your last school/college</label>
+        <input required type="text" name="lCollege" autocomplete="lCollege" id="lCollege" minlength="3" maxlength="25">
+        
+        <label for="name">Type Your Date of Admission</label>
+        <input required type="date" name="dateOfAd" autocomplete="dateOfAd" id="dateOfAd" minlength="3" maxlength="25">
+        
+        <label for="name">Conduct & Progress</label>
+        <input required type="text" name="conduct" autocomplete="conduct" id="conduct" minlength="3" maxlength="25">
+        
+        <label for="name">Type Your Date of Leaving</label>
+        <input required type="text" name="dateOfLeav" autocomplete="dateOfLeav" id="dateOfLeav" minlength="3" maxlength="25">
+        
+        <label for="name">Year in which studying and since when</label>
+        <input required type="text" name="yearInStud" autocomplete="yearInStud" id="yearInStud" minlength="3" maxlength="25">
+        
+        <label for="name">Reason for LC</label>
+        <input required type="text" name="reason" autocomplete="reason" id="reason" minlength="3" maxlength="25">
+        
+        <label for="name">Remarks</label>
+        <input required type="text" name="remarks" autocomplete="remarks" id="remarks" minlength="3" maxlength="25">
+        
+        <Button id="submitBtn">Get Certificate</Button>
+
+
+    </main>
     <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="./FileSaver.js"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
     <script src="./index.js"></script>
 </body>
 </html>
