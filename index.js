@@ -98,7 +98,15 @@ const generatePDF = async (name, Mname, religion,
         size: 12,
     });
 
-    //const uri = await pdfDoc.saveAsBase64({dataUri: true});
+    const uri = await pdfDoc.saveAsBase64({dataUri: true});
+
+    // Create a new HTML page with an embedded PDF
+    const newWindow = window.open();
+    newWindow.document.write(
+        `<html><head><title>Generated PDF</title></head><body><embed src="${uri}" type="application/pdf" width="100%" height="100%" /></body></html>`
+    );
+
+    newWindow.document.close();
     //saveAs(uri, "LC.pdf", {autoBom: true})
     document.querySelector("#mypdf").src = uri;
 };
@@ -122,13 +130,9 @@ submitBtn.addEventListener("click", ()=> {
     const userreason = document.querySelector("#reason").value
     const userremarks = document.querySelector("#remarks").value
 
-    alert(userName)
-    alert(userdateOfLeav)
-    alert(userconduct)
+    generatePDF(userName, userMname, userreligion, usernationality,
+    userplaceOfBirth, userdobInFig, userdobInWords,
+    userlCollege, userdateOfAd,userconduct, userdateOfLeav, 
+    useryearInStud, userreason, userremarks)
     
 })
-
-generatePDF("Pranav khandgale", "Deepali", "Hindu", "Indian",
- "Solapur", "12/01/2003", "fifteen January two thousand and three",
- "Fattechand", "12/12/2022", "Good", "1/07/2025", 
- "BE since 2024", "PassOut", "Good")
