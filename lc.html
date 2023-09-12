@@ -3,65 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LC generator</title>
     <link rel="stylesheet" href="/css/index.css">
-
-    <title>Get your LC</title>
 </head>
 <body>
     <header>
-        Get your certificate
+       <h2> Get your Leaving Certificate </h2>
     </header>
+    
     <main>
-
-        <label for="name">Type Your Name</label>
-        <input required type="text" name="name" autocomplete="name" id="name" minlength="3" maxlength="25">
+        <label for="name"> Name</label>
+        <input required type="text" name="name" autocomplete="name" id="name">
         
-        <label for="name">Type Your Mother Name</label>
-        <input required type="text" name="Mname" autocomplete="Mname" id="Mname" minlength="3" maxlength="25">
+        <label for="Mname"> Mother Name</label>
+        <input required type="text" name="Mname" autocomplete="Mname" id="Mname">
         
-        <label for="name">Type Your Religion</label>
-        <input required type="text" name="religion" autocomplete="religion" id="religion" minlength="3" maxlength="25">
+        <label for="religion"> Religion</label>
+        <input required type="text" name="religion" autocomplete="religion" id="religion">
         
-        <label for="name">Type Your Nationality</label>
-        <input required type="text" name="nationality" autocomplete="nationality" id="nationality" minlength="3" maxlength="25">
+        <label for="nationality"> Nationality</label>
+        <input required type="text" name="nationality" autocomplete="nationality" id="nationality">
         
-        <label for="name">Type Your Place of Birth</label>
-        <input required type="text" name="placeOfBirth" autocomplete="placeOfBirth" id="placeOfBirth" minlength="3" maxlength="25">
+        <label for="placeOfBirth"> Place of Birth</label>
+        <input required type="text" name="placeOfBirth" autocomplete="placeOfBirth" id="placeOfBirth">
         
-        <label for="name">Type Your Date of Birth</label>
-        <input required type="date" name="dobInFig" autocomplete="dobInFig" id="dobInFig" minlength="3" maxlength="25">
+        <label for="dobInFig"> Date of Birth</label>
+        <input required type="date" name="dobInFig" autocomplete="dobInFig" id="dobInFig">
         
-        <label for="name">Type Your DOB in words</label>
-        <input required type="text" name="dobInWords" autocomplete="dobInWords" id="dobInWords" minlength="3" maxlength="25">
+        <label for="dobInWords"> DOB in words</label>
+        <input required type="text" name="dobInWords" autocomplete="dobInWords" id="dobInWords">
         
-        <label for="name">Type Your last school/college</label>
-        <input required type="text" name="lCollege" autocomplete="lCollege" id="lCollege" minlength="3" maxlength="25">
+        <label for="lCollege"> last school/college</label>
+        <input required type="text" name="lCollege" autocomplete="lCollege" id="lCollege">
         
-        <label for="name">Type Your Date of Admission</label>
-        <input required type="date" name="dateOfAd" autocomplete="dateOfAd" id="dateOfAd" minlength="3" maxlength="25">
+        <label for="dateOfAd"> Date of Admission</label>
+        <input required type="date" name="dateOfAd" autocomplete="dateOfAd" id="dateOfAd" >
         
-        <label for="name">Conduct & Progress</label>
-        <input required type="text" name="conduct" autocomplete="conduct" id="conduct" minlength="3" maxlength="25">
+        <label for="conduct">Conduct & Progress</label>
+        <input required type="text" name="conduct" autocomplete="conduct" id="conduct" >
         
-        <label for="name">Type Your Date of Leaving</label>
-        <input required type="text" name="dateOfLeav" autocomplete="dateOfLeav" id="dateOfLeav" minlength="3" maxlength="25">
+        <label for="dateOfLeav"> Date of Leaving</label>
+        <input required type="datetime-local" name="dateOfLeav" autocomplete="dateOfLeav" id="dateOfLeav" >
         
-        <label for="name">Year in which studying and since when</label>
-        <input required type="text" name="yearInStud" autocomplete="yearInStud" id="yearInStud" minlength="3" maxlength="25">
+        <label for="yearInStud">Year in which studying and since when</label>
+        <input required type="text" name="yearInStud" autocomplete="yearInStud" id="yearInStud" >
         
-        <label for="name">Reason for LC</label>
-        <input required type="text" name="reason" autocomplete="reason" id="reason" minlength="3" maxlength="25">
+        <label for="reason">Reason for LC</label>
+        <input required type="text" name="reason" autocomplete="reason" id="reason">
         
-        <label for="name">Remarks</label>
-        <input required type="text" name="remarks" autocomplete="remarks" id="remarks" minlength="3" maxlength="25">
+        <label for="remarks">Remarks</label>
+        <input required type="text" name="remarks" autocomplete="remarks" id="remarks" >
         
-        <Button id="submitBtn">Get Certificate</Button>
-
-
+        <button id="submit" >Get Certificate</button>
     </main>
+
     <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="./index.js" type="module"></script>
     <script src="./FileSaver.js"></script>
-    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
-    <script src="./index.js"></script>
 </body>
 </html>

@@ -1,22 +1,4 @@
-const userName = document.getElementById("name");
-const userMname = document.getElementById("Mname");
-const userreligion = document.getElementById("religion");
-const usernationality = document.getElementById("nationality");
-const userplaceOfBirth = document.getElementById("placeOfBirth");
-const userdobInFig = document.getElementById("dobInFig");
-const userdobInWords = document.getElementById("dobInWords");
-const userlCollege = document.getElementById("lCollege");
-const userdateOfAd = document.getElementById("dateOfAd");
-const userconduct = document.getElementById("conduct");
-const userdateOfLeav = document.getElementById("dateOfLeav");
-const useryearInStud = document.getElementById("yearInStud");
-const userreason = document.getElementById("reason");
-const userremarks = document.getElementById("remarks");
-
-const submitBtn = document.getElementById("submitBtn");
-
-const { PDFDocument, rgb, degrees } = PDFLib;
-
+//import { saveAs } from "./FileSaver";
 
 const generatePDF = async (name, Mname, religion, 
     nationality, placeOfBirth, dobInFig, dobInWords,
@@ -116,25 +98,37 @@ const generatePDF = async (name, Mname, religion,
         size: 12,
     });
 
-    
-     // Serialize the PDFDocument to bytes (a Uint8Array)
-    const pdfBytes = await pdfDoc.save();
-    console.log("Done creating");
     //const uri = await pdfDoc.saveAsBase64({dataUri: true});
+    //saveAs(uri, "LC.pdf", {autoBom: true})
+    document.querySelector("#mypdf").src = uri;
+};
 
-    var file = new File(
-        [pdfBytes],
-        "Padhega India Subscription Certificate.pdf",
-        {
-          type: "application/pdf;charset=utf-8",
-        }
-      );
-     saveAs(file);
-    };
-    // document.querySelector("#mypdf").src = uri;
+const submitBtn = document.getElementById("submit")
 
+submitBtn.addEventListener("click", ()=> {
+    
+    const userName = document.querySelector("#name").value
+    const userMname = document.querySelector("#Mname").value
+    const userreligion = document.querySelector("#religion").value
+    const usernationality = document.querySelector("#nationality").value
+    const userplaceOfBirth = document.querySelector("#placeOfBirth").value
+    const userdobInFig = document.querySelector("#dobInFig").value
+    const userdobInWords = document.querySelector("#dobInWords").value
+    const userlCollege = document.querySelector("#lCollege").value
+    const userdateOfAd = document.querySelector("#dateOfAd").value
+    const userconduct = document.querySelector("#conduct").value
+    const userdateOfLeav = document.querySelector("#dateOfLeav").value
+    const useryearInStud = document.querySelector("#yearInStud").value
+    const userreason = document.querySelector("#reason").value
+    const userremarks = document.querySelector("#remarks").value
 
-// generatePDF("Khandu", "Bharat", "Hindu", "Indian",
-//  "Solapur", "30/02/2003", "fifteen January two thousand and three",
-//  "Fattechand", "12/12/2022", "Good", "1/07/2025", 
-//  "BE since 2024", "PassOut", "Good")
+    alert(userName)
+    alert(userdateOfLeav)
+    alert(userconduct)
+    
+})
+
+generatePDF("Pranav khandgale", "Deepali", "Hindu", "Indian",
+ "Solapur", "12/01/2003", "fifteen January two thousand and three",
+ "Fattechand", "12/12/2022", "Good", "1/07/2025", 
+ "BE since 2024", "PassOut", "Good")
